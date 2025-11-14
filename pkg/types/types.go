@@ -74,11 +74,6 @@ type Deployer interface {
 	Up() error
 	// Down should tear down the test cluster if any
 	Down() error
-	// IsUp should return true if a test cluster is successfully provisioned
-	IsUp() (up bool, err error)
-	// DumpClusterLogs should export logs from the cluster. It may be called
-	// multiple times. Options for this should come from New(...)
-	DumpClusterLogs() error
 	// Build should build kubernetes and package it in whatever format
 	// the deployer consumes
 	Build() error
